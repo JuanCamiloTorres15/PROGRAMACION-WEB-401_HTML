@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Registro de Usuario</title>
+</head>
+
+<body bgcolor="skyblue">
+
+<center>
+
+<h1>Registro de Usuario</h1>
+
+<form>
+
+<table>
+
+<tr>
+<td>Tipo de Documento:</td>
+<td>
+<select required>
+<option value="">Seleccione</option>
+<option>CC</option>
+<option>TI</option>
+<option>CE</option>
+<option>Pasaporte</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Número de Documento:</td>
+<td>
+<input type="text" required pattern="[0-9]{6,12}" title="Solo números entre 6 y 12 dígitos">
+</td>
+</tr>
+
+<tr>
+<td>Nombres:</td>
+<td>
+<input type="text" required minlength="3" maxlength="64"
+pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}">
+</td>
+</tr>
+
+<tr>
+<td>Apellidos:</td>
+<td>
+<input type="text" required minlength="3" maxlength="64"
+pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}">
+</td>
+</tr>
+
+<tr>
+<td>Dirección:</td>
+<td>
+<input type="text" required>
+</td>
+</tr>
+
+<tr>
+<td>Teléfono Fijo:</td>
+<td>
+<input type="tel" pattern="[0-9]{7}">
+</td>
+</tr>
+
+<tr>
+<td>Teléfono Celular:</td>
+<td>
+<input type="tel" required pattern="[0-9]{10}">
+</td>
+</tr>
+
+<tr>
+<td>Correo Electrónico:</td>
+<td>
+<input type="email" required
+pattern="[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}">
+</td>
+</tr>
+
+<tr>
+<td>Usuario:</td>
+<td>
+<input type="text" required
+pattern="[A-Za-z]{3,14}[0-9]{0,2}"
+title="Letras y hasta dos números al final (3 a 16 caracteres)">
+</td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td>
+<input type="password" required maxlength="16"
+pattern="(?=(.*[A-Z]){1})(?=(.*[a-z]){2})(?=(.*[0-9]){5})(?=.*[!\?\-\+\/&\$\.]).{16}">
+</td>
+</tr>
+
+<tr>
+<td>Fecha de Inscripción:</td>
+<td>
+<input type="date" required min="2026-02-15" max="2026-03-10">
+</td>
+</tr>
+
+<tr>
+<td>Hobbies:</td>
+<td>
+<input type="checkbox"> Música<br>
+<input type="checkbox"> Deportes<br>
+<input type="checkbox"> Lectura<br>
+<input type="checkbox"> Arte
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="submit" value="Enviar">
+<input type="reset" value="Limpiar">
+
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</center>
+
+</body>
+</html>
